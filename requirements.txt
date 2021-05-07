@@ -1,0 +1,15 @@
+Webpack (imports/exports)
+  Babel
+  Scss
+  Eslint
+  2 Modes
+    - Dev
+        Dev Server, SourceMaps, Eslint, Not Minifield JS & CSS
+    - Prod
+        Minifield Code
+Git
+  Production 
+    1.0.0
+  Development
+    1.0.2
+     
