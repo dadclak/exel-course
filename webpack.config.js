@@ -51,7 +51,7 @@ module.exports = (env, argv) => {
       clean: true,
     },
     devServer: {
-      port: '8080',
+      port: '3000',
       open: true,
       watchContentBase: true,
     },
