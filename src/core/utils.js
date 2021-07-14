@@ -14,3 +14,10 @@ export const range = (start, end) => {
       .fill('')
       .map((_, idx) => start + idx)
 }
+
+export const storage = (key, data = null) => {
+  if (!data) {
+    return JSON.parse(localStorage.getItem(key))
+  }
+  localStorage.setItem(key, JSON.stringify(data))
+}
