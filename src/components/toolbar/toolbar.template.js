@@ -18,7 +18,7 @@ export function toButton(button) {
   `
 }
 
-export function createToolbar() {
+export function createToolbar(state) {
   const buttons = [
     {
       icon: 'format_align_left',
@@ -37,18 +37,22 @@ export function createToolbar() {
     },
     {
       icon: 'format_bold',
-      active: false,
-      value: {fontWeight: 'bolt'},
+      active: state.fontWeight === 'bold',
+      value: {fontWeight: state.fontWeight === 'bold' ? 'normal' : 'bold'},
     },
     {
       icon: 'format_italic',
-      active: false,
-      value: {fontStyle: 'italic'},
+      active: state.fontStyle === 'italic',
+      value: {fontStyle: state.fontStyle === 'italic' ? 'normal' : 'italic'},
     },
     {
       icon: 'format_underlined',
-      active: false,
-      value: {TextDecoration: 'underline'},
+      active: state.textDecoration === 'underline',
+      value: {
+        textDecoration: state.textDecoration === 'underline'
+          ? 'none'
+          : 'underline',
+      },
     },
   ]
   return buttons.map(toButton).join('')
