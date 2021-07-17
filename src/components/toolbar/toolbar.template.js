@@ -22,17 +22,17 @@ export function createToolbar(state) {
   const buttons = [
     {
       icon: 'format_align_left',
-      active: false,
+      active: state.textAlign === 'left',
       value: {textAlign: 'left'},
     },
     {
       icon: 'format_align_center',
-      active: false,
+      active: state.textAlign === 'center',
       value: {textAlign: 'center'},
     },
     {
       icon: 'format_align_right',
-      active: false,
+      active: state.textAlign === 'right',
       value: {textAlign: 'right'},
     },
     {
