@@ -38,8 +38,12 @@ export class Table extends ExcelComponent {
       this.$on('formula:done', () => {
         this.selection.current.focus()
       })
-      this.$on('formula:applyStyle', style => {
-        this.selection.applyStyle(style)
+      this.$on('formula:applyStyle', value => {
+        this.selection.applyStyle(value)
+        this.$dispatch(actions.applyStyle({
+          value,
+          ids: this.selection.selectedIds,
+        }))
       })
     }
 
@@ -47,7 +51,6 @@ export class Table extends ExcelComponent {
       this.selection.select($cell)
       this.$emit('table:select', $cell)
       const styles = $cell.getStyles(Object.keys(defaultStyles))
-      console.log('styles to dispatch', styles);
       this.$dispatch(actions.changeStyles(styles))
     }
 
