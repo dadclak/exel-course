@@ -9,7 +9,7 @@ This application is written in pure javascript. With the ability:
 - [x] as well as minimal field styling.
 
 ---
-![Alt Text](https://drive.google.com/file/d/1Kdx5jDbs_1D9LloEkk1DYUx4SKLTUNoE/view?usp=sharing)
+![Alt Text](readmeimg/excel1.png)
 
 ---
 ## Tech stack
